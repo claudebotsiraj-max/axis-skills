@@ -1,53 +1,40 @@
-# MEMORY.md — Axis Index 🌀
+# MEMORY.md — Axis Index
 
-> **This is an index.** Detail lives in `memory/` subdirectories. Drill down on demand.
+> Lightweight index. Detail in memory/ subdirectories. Max 5 drill-downs per session.
 
-## Always Load
-- `memory/people/salah.md` — owner context (load when any conversation)
-- `memory/context/cron-jobs.md` — load when cron/scheduling topics arise
+## Always Load (active context)
+- `memory/context/setup.md` — infra, Discord channels, known issues
+- `memory/context/cron-jobs.md` — all scheduled jobs with IDs
 
 ## People
-
 | File | Triggers | Summary |
-|---|---|---|
-| `memory/people/salah.md` | salah, owner, phone, discord, preferences | Owner, PM, Eastern TZ, @salahsiraj |
+|------|----------|---------|
+| `memory/people/salah.md` | salah, phone, voice, preferences | Owner. PM, EST. TSLA/trading focus. |
 
 ## Projects
-
 | File | Triggers | Summary |
-|---|---|---|
-| `memory/projects/mission-control.md` | mission control, dashboard, convex, next.js | Next.js 15 + Convex dashboard |
-| `memory/projects/liberty-academy.md` | liberty, gymnastics, librhythm, instagram, tiktok | Rhythmic gymnastics academy site |
-| `memory/projects/fundamental.md` | fundamental, webflow, salah business | Salah's business (Webflow) |
-
-## Context
-
-| File | Triggers | Summary |
-|---|---|---|
-| `memory/context/setup.md` | setup, browser, identity, systems, issues | Axis identity, connected services, known issues |
-| `memory/context/cron-jobs.md` | cron, schedule, alert, briefing, backup | 7 cron jobs (morning brief, stocks, X, backup) |
-| `memory/context/accounts.md` | account, email, vapi, phone, financial, postiz | All accounts & services |
+|------|----------|---------|
+| `memory/projects/portfolio.md` | stocks, options, TSLA, portfolio, trading, IRA | $4M IRA, 72% TSLA, options income strategy |
+| `memory/projects/liberty-academy.md` | liberty, gymnastics, content, instagram, tiktok | RG school content pipeline, Postiz integration |
+| `memory/projects/mission-control.md` | dashboard, mission control, convex | Next.js + Convex dashboard (built Feb 13) |
+| `memory/projects/fundamental.md` | fundamental, business, webflow | Salah's business |
 
 ## Decisions
-
-| File | Triggers | Summary |
-|---|---|---|
-| `memory/decisions/2026-02.md` | decision, why, history, february | Feb 2026 key decisions |
+| File | Period |
+|------|--------|
+| `memory/decisions/2026-02.md` | Feb 2026 — all key decisions this month |
 
 ## Quick Reference
-- **Discord guild**: `1471495542025486489`
-- **#general**: `1471495542604562576`
-- **#personal**: `1472035483931508808`
-- **#stock-alert**: `1472035598884667484`
-- **#x-post**: `1472035536532410552`
-- **Salah phone**: +19172702468
-- **Vapi/Twilio**: +19175402881
-- **Bot email**: claudebotsiraj@gmail.com
-- **Personal email**: siraj.salah@gmail.com
+- Discord guild: `1471495542025486489`
+- #general: `1471495542604562576` | #personal: `1472035483931508808`
+- #stock-alert: `1472035598884667484` | #x-post: `1472035536532410552`
+- Salah Discord: `707726343252607029` | Bot: `1471493506634748070`
+- GitHub: <https://github.com/claudebotsiraj-max/axis-skills>
+- Notion API key: in TOOLS.md
 
-## Drill-Down Rules
-1. Session start: load this index only (~1.5K tokens)
-2. Auto-drill when conversation matches trigger keywords
-3. Max 5 drill-downs at session start
-4. Always update index when changing detail files (same commit)
-5. Keep index under 3K tokens — archive inactive items
+## Systems
+- Reminders: `memory/reminders.md` — repeat until dismissed
+- Expenses: `memory/expenses/YYYY-MM.md`
+- X watchlist: `memory/x-watchlist.md` (19 accounts + 2 lists)
+- Stock watchlist: `memory/stock-watchlist.md`
+- Portfolio: `memory/portfolio-watchlist.md` + `memory/portfolio-analysis.md`
