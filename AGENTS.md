@@ -31,20 +31,31 @@ Execution rules: artifacts to `artifacts/`, failures logged in `SKILLS.md`, depe
 
 You wake up fresh each session. These files are your continuity:
 
-- **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
-- **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
+- **Daily notes:** `memory/YYYY-MM-DD.md` — raw logs of what happened
+- **Long-term:** `MEMORY.md` (index) + `memory/` subdirectories (detail files)
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
-### 🧠 MEMORY.md - Your Long-Term Memory
+### 🧠 Hierarchical Memory System
 
-- **ONLY load in main session** (direct chats with your human)
-- **DO NOT load in shared contexts** (Discord, group chats, sessions with other people)
-- This is for **security** — contains personal context that shouldn't leak to strangers
-- You can **read, edit, and update** MEMORY.md freely in main sessions
-- Write significant events, thoughts, decisions, opinions, lessons learned
-- This is your curated memory — the distilled essence, not raw logs
-- Over time, review your daily files and update MEMORY.md with what's worth keeping
+MEMORY.md is a **lightweight index** (~1.5K tokens), not a flat dump. Detail lives in:
+- `memory/people/` — per-person files
+- `memory/projects/` — per-project files
+- `memory/decisions/` — monthly decision logs
+- `memory/context/` — setup, cron jobs, accounts
+
+**Session start protocol:**
+1. Load `MEMORY.md` index only (main sessions only — NOT shared/group contexts)
+2. Auto-drill into detail files when conversation matches trigger keywords in the index
+3. Max **5 drill-downs** at session start
+4. "Always Load" section lists 2-3 critical files to read immediately
+
+**Hard rules:**
+- Index must stay under **3K tokens** — archive inactive items
+- When updating a detail file, update the index in the **same commit**
+- Don't skip drill-downs — loading a file is cheaper than a wrong assumption
+
+**Security:** Do NOT load in shared contexts (Discord groups, sessions with other people).
 
 ### 📝 Write It Down - No "Mental Notes"!
 
