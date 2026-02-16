@@ -1,0 +1,7 @@
+[
+  { "id": "t1", "title": "Set up CI/CD pipeline for mission-control", "description": "Configure GitHub Actions for automated testing and deployment", "category": "Engineering", "emoji": "⚙️", "priority": "high", "status": "pending", "createdAt": "2026-02-13T20:00:00Z", "source": "system" },
+  { "id": "t2", "title": "Write blog post about agent memory systems", "description": "Deep dive into how persistent memory works across sessions", "category": "Content", "emoji": "✍️", "priority": "medium", "status": "pending", "createdAt": "2026-02-13T19:00:00Z", "source": "content-agent" },
+  { "id": "t3", "title": "Review and update client proposals", "description": "3 proposals pending review in the clients folder", "category": "Business", "emoji": "💼", "priority": "high", "status": "pending", "createdAt": "2026-02-13T18:00:00Z", "source": "crm" },
+  { "id": "t4", "title": "Optimize Convex query performance", "description": "Add indexes to frequently queried fields in activities table", "category": "Engineering", "emoji": "⚙️", "priority": "medium", "status": "approved", "createdAt": "2026-02-13T15:00:00Z", "source": "system" },
+  { "id": "t5", "title": "Schedule social media for next week", "description": "Prepare and schedule 5 posts across Twitter and LinkedIn", "category": "Marketing", "emoji": "📢", "priority": "low", "status": "pending", "createdAt": "2026-02-13T14:00:00Z", "source": "content-agent" }
+]

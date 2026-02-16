@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1920px; font-family: 'Helvetica Neue', Arial, sans-serif; overflow: hidden; }
+.slide {
+  width: 1080px; height: 1920px;
+  background: url('photos/ribbon.jpeg') center/cover no-repeat;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 80px; position: relative;
+}
+.overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(13,33,55,0.88) 0%, rgba(26,58,92,0.78) 50%, rgba(42,90,122,0.72) 100%); }
+.content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 82px; color: #fff; font-weight: 800; line-height: 1.15; margin-bottom: 50px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.highlight { color: #7dd3fc; }
+.grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 100%; max-width: 900px; margin-bottom: 60px; }
+.card { background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 24px; padding: 40px 30px; text-align: center; }
+.card-emoji { font-size: 64px; margin-bottom: 16px; }
+.card-text { font-size: 34px; color: rgba(255,255,255,0.95); font-weight: 600; }
+.apparatus { margin-top: 20px; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+.app-tag { background: rgba(125,211,252,0.2); backdrop-filter: blur(5px); border: 1px solid rgba(125,211,252,0.4); border-radius: 50px; padding: 14px 32px; color: #7dd3fc; font-size: 28px; font-weight: 600; }
+.badge { position: absolute; bottom: 80px; z-index: 1; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.25); border-radius: 50px; padding: 20px 50px; }
+.badge span { color: rgba(255,255,255,0.9); font-size: 30px; letter-spacing: 3px; text-transform: uppercase; }
+</style></head><body>
+<div class="slide">
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>More Than Just<br><span class="highlight">Gymnastics</span></h1>
+    <div class="grid">
+      <div class="card"><div class="card-emoji">🤸‍♀️</div><div class="card-text">Flexibility</div></div>
+      <div class="card"><div class="card-emoji">🎯</div><div class="card-text">Coordination</div></div>
+      <div class="card"><div class="card-emoji">⚖️</div><div class="card-text">Balance</div></div>
+      <div class="card"><div class="card-emoji">💪</div><div class="card-text">Confidence</div></div>
+    </div>
+    <div class="apparatus">
+      <div class="app-tag">🪢 Rope</div><div class="app-tag">⭕ Hoop</div>
+      <div class="app-tag">🔵 Ball</div><div class="app-tag">🎀 Ribbon</div>
+      <div class="app-tag">🥢 Clubs</div>
+    </div>
+  </div>
+  <div class="badge"><span>Liberty Academy</span></div>
+</div>
+</body></html>

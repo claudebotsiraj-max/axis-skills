@@ -1,0 +1,24 @@
+# Secrets & config
+openclaw.json
+TOOLS.md
+*.env
+
+# Node
+node_modules/
+.next/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+mission-control/node_modules/
+mission-control/.next/
+
+# Large media (keep PNGs for slides)
+*.mp4
+*.zip
+
+# Temp
+*.tmp
+*.log

@@ -1,0 +1,6 @@
+[
+  { "name": "Gateway", "status": "healthy", "url": "localhost:3001", "lastCheck": "2026-02-13T22:00:00Z", "responseTime": 42, "uptime": "99.97%" },
+  { "name": "Convex Backend", "status": "healthy", "url": "convex.cloud", "lastCheck": "2026-02-13T22:00:00Z", "responseTime": 89, "uptime": "99.99%" },
+  { "name": "Mission Control", "status": "healthy", "url": "localhost:3000", "lastCheck": "2026-02-13T22:00:00Z", "responseTime": 15, "uptime": "100%" },
+  { "name": "Vapi Phone", "status": "healthy", "url": "api.vapi.ai", "lastCheck": "2026-02-13T22:00:00Z", "responseTime": 120, "uptime": "99.95%" }
+]

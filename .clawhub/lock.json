@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "skills": {
+    "google-trends": {
+      "version": "1.0.0",
+      "installedAt": 1770954543863
+    },
+    "investing": {
+      "version": "1.0.0",
+      "installedAt": 1771098846843
+    },
+    "upload-post": {
+      "version": "1.0.0",
+      "installedAt": 1771098967090
+    },
+    "instagram-scraper": {
+      "version": "1.0.3",
+      "installedAt": 1771098973207
+    },
+    "tiktok-crawling": {
+      "version": "1.0.0",
+      "installedAt": 1771098977606
+    },
+    "x-post-automation": {
+      "version": "1.0.0",
+      "installedAt": 1771119632230
+    },
+    "yahoo-finance": {
+      "version": "1.0.0",
+      "installedAt": 1771119636794
+    },
+    "crypto-market-data": {
+      "version": "1.0.2",
+      "installedAt": 1771119643921
+    },
+    "email-to-calendar": {
+      "version": "1.13.1",
+      "installedAt": 1771120092030
+    },
+    "youtube-transcript": {
+      "version": "1.0.1",
+      "installedAt": 1771120112880
+    },
+    "reddit-readonly": {
+      "version": "1.0.0",
+      "installedAt": 1771120594515
+    },
+    "finance-news": {
+      "version": "1.0.1",
+      "installedAt": 1771120614973
+    },
+    "gemini-image-gen": {
+      "version": "1.3.0",
+      "installedAt": 1771120698887
+    },
+    "trading-coach": {
+      "version": "1.0.0",
+      "installedAt": 1771160496548
+    }
+  }
+}

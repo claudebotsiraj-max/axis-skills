@@ -1,0 +1,6 @@
+[
+  { "id": "heartbeat", "name": "Heartbeat Check", "schedule": "*/30 * * * *", "lastRun": "2026-02-13T21:30:00Z", "nextRun": "2026-02-13T22:00:00Z", "status": "healthy", "duration": 2400 },
+  { "id": "email-check", "name": "Email Monitor", "schedule": "*/15 * * * *", "lastRun": "2026-02-13T21:45:00Z", "nextRun": "2026-02-13T22:00:00Z", "status": "healthy", "duration": 1800 },
+  { "id": "calendar-sync", "name": "Calendar Sync", "schedule": "0 * * * *", "lastRun": "2026-02-13T21:00:00Z", "nextRun": "2026-02-13T22:00:00Z", "status": "healthy", "duration": 3200 },
+  { "id": "backup", "name": "Workspace Backup", "schedule": "0 4 * * *", "lastRun": "2026-02-13T04:00:00Z", "nextRun": "2026-02-14T04:00:00Z", "status": "healthy", "duration": 12000 }
+]

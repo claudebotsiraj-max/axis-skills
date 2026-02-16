@@ -1,0 +1,246 @@
+{
+  "tickers": {
+    "AAPL": {
+      "sector": "Mega Tech",
+      "supports": [
+        240,
+        230,
+        220
+      ],
+      "resistances": [
+        268,
+        280,
+        289
+      ],
+      "sma50": 267.58,
+      "sma200": 240.08,
+      "alertThreshold": 0.02
+    },
+    "GOOG": {
+      "sector": "Mega Tech",
+      "supports": [
+        300,
+        285,
+        270
+      ],
+      "resistances": [
+        322,
+        335,
+        350
+      ],
+      "sma50": 321.93,
+      "sma200": 243.67,
+      "alertThreshold": 0.02
+    },
+    "AMZN": {
+      "sector": "Mega Tech",
+      "supports": [
+        195,
+        185,
+        175
+      ],
+      "resistances": [
+        210,
+        225,
+        245
+      ],
+      "sma50": 230.45,
+      "sma200": 223.57,
+      "alertThreshold": 0.02
+    },
+    "NVDA": {
+      "sector": "Mega Tech",
+      "supports": [
+        172,
+        165,
+        155
+      ],
+      "resistances": [
+        190,
+        200,
+        212
+      ],
+      "sma50": 184.45,
+      "sma200": 171.69,
+      "alertThreshold": 0.02
+    },
+    "AMD": {
+      "sector": "Semiconductors",
+      "supports": [
+        200,
+        190,
+        182
+      ],
+      "resistances": [
+        221,
+        240,
+        267
+      ],
+      "sma50": 221.18,
+      "sma200": 181.87,
+      "alertThreshold": 0.02
+    },
+    "AVGO": {
+      "sector": "Semiconductors",
+      "supports": [
+        313,
+        300,
+        285
+      ],
+      "resistances": [
+        346,
+        370,
+        415
+      ],
+      "sma50": 346.05,
+      "sma200": 312.81,
+      "alertThreshold": 0.02
+    },
+    "MU": {
+      "sector": "Semiconductors",
+      "supports": [
+        390,
+        370,
+        350
+      ],
+      "resistances": [
+        430,
+        455,
+        480
+      ],
+      "sma50": 330.18,
+      "sma200": 192.65,
+      "alertThreshold": 0.02
+    },
+    "TSM": {
+      "sector": "Semiconductors",
+      "supports": [
+        350,
+        330,
+        320
+      ],
+      "resistances": [
+        380,
+        400,
+        420
+      ],
+      "sma50": 320.61,
+      "sma200": 264.48,
+      "alertThreshold": 0.02
+    },
+    "TSLA": {
+      "sector": "EV / Energy",
+      "supports": [
+        385,
+        370,
+        350
+      ],
+      "resistances": [
+        444,
+        470,
+        499
+      ],
+      "sma50": 443.95,
+      "sma200": 385.16,
+      "alertThreshold": 0.02
+    },
+    "HOOD": {
+      "sector": "Fintech / Crypto",
+      "supports": [
+        70,
+        60,
+        50
+      ],
+      "resistances": [
+        90,
+        105,
+        120
+      ],
+      "sma50": 110.15,
+      "sma200": 105.84,
+      "alertThreshold": 0.02
+    },
+    "COIN": {
+      "sector": "Fintech / Crypto",
+      "supports": [
+        140,
+        130,
+        120
+      ],
+      "resistances": [
+        190,
+        225,
+        280
+      ],
+      "sma50": 226.8,
+      "sma200": 289.68,
+      "alertThreshold": 0.02
+    },
+    "NBIS": {
+      "sector": "AI / Emerging",
+      "supports": [
+        90,
+        80,
+        70
+      ],
+      "resistances": [
+        110,
+        125,
+        141
+      ],
+      "sma50": 92.73,
+      "sma200": 78.06,
+      "alertThreshold": 0.02
+    },
+    "CRWV": {
+      "sector": "AI / Emerging",
+      "supports": [
+        85,
+        75,
+        65
+      ],
+      "resistances": [
+        106,
+        120,
+        145
+      ],
+      "sma50": 90,
+      "sma200": null,
+      "alertThreshold": 0.03
+    },
+    "CRCL": {
+      "sector": "AI / Emerging",
+      "supports": [
+        50,
+        45,
+        40
+      ],
+      "resistances": [
+        65,
+        75,
+        90
+      ],
+      "sma50": 70,
+      "sma200": null,
+      "alertThreshold": 0.03
+    }
+  },
+  "lastChecked": "2026-02-13T22:26:00Z",
+  "lastPrices": {
+    "AAPL": 255.78,
+    "GOOG": 306.02,
+    "AMZN": 198.79,
+    "NVDA": 182.81,
+    "AMD": 207.32,
+    "AVGO": 325.17,
+    "MU": 411.66,
+    "TSM": 366.36,
+    "TSLA": 417.44,
+    "HOOD": 75.97,
+    "COIN": 164.32,
+    "NBIS": 98.01,
+    "CRWV": 96.04,
+    "CRCL": 60.04
+  },
+  "updatedAt": "2026-02-13T22:26:00Z"
+}

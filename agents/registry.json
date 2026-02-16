@@ -1,0 +1,6 @@
+[
+  { "id": "main", "name": "Claude", "role": "Primary Assistant", "status": "active", "model": "claude-opus-4-6", "lastActive": "2026-02-13T22:00:00Z", "channels": ["webchat", "discord", "telegram"], "subAgents": ["researcher", "coder", "writer"] },
+  { "id": "researcher", "name": "Researcher", "role": "Web Research & Analysis", "status": "idle", "model": "claude-sonnet-4-20250514", "lastActive": "2026-02-13T20:15:00Z", "channels": ["internal"] },
+  { "id": "coder", "name": "Coder", "role": "Code Generation & Review", "status": "idle", "model": "claude-sonnet-4-20250514", "lastActive": "2026-02-13T21:45:00Z", "channels": ["internal"] },
+  { "id": "writer", "name": "Writer", "role": "Content Creation", "status": "offline", "model": "claude-sonnet-4-20250514", "lastActive": "2026-02-12T18:00:00Z", "channels": ["internal"] }
+]

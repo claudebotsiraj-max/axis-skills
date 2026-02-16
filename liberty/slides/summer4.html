@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1080px; height: 1920px; font-family: 'Helvetica Neue', Arial, sans-serif; overflow: hidden; }
+.slide { width: 1080px; height: 1920px; background: url('photos/training-session.jpeg') center/cover no-repeat; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 80px; position: relative; }
+.overlay { position: absolute; inset: 0; background: rgba(26,26,46,0.60); }
+.content { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; }
+h1 { font-size: 80px; color: #fff; font-weight: 800; line-height: 1.15; margin-bottom: 50px; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+.highlight { color: #D4AF37; }
+p { font-size: 40px; color: rgba(255,255,255,0.9); line-height: 1.6; max-width: 860px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+.stat-bar { margin-top: 50px; background: rgba(212,175,55,0.2); border: 2px solid rgba(212,175,55,0.4); border-radius: 20px; padding: 28px 50px; }
+.stat-text { color: #D4AF37; font-size: 32px; font-weight: 700; }
+.badge { position: absolute; bottom: 80px; z-index: 1; background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.25); border-radius: 50px; padding: 20px 50px; }
+.badge span { color: rgba(255,255,255,0.9); font-size: 30px; letter-spacing: 3px; text-transform: uppercase; }
+.slide-num { position: absolute; top: 60px; right: 70px; z-index: 1; font-size: 28px; color: rgba(255,255,255,0.5); font-weight: 600; }
+</style></head><body>
+<div class="slide">
+  <div class="overlay"></div>
+  <div class="slide-num">4/6</div>
+  <div class="content">
+    <h1>More Than<br>a <span class="highlight">Camp</span></h1>
+    <p>This isn't daycare with cartwheels. It's world-class training in a fun, supportive environment — led by a coach with 33+ years of international experience.</p>
+    <div class="stat-bar"><div class="stat-text">🏅 33+ Years · Olympians Produced · USSR-Trained Coach</div></div>
+  </div>
+  <div class="badge"><span>Liberty Academy</span></div>
+</div>
+</body></html>

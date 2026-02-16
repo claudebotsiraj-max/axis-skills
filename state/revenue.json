@@ -1,0 +1,6 @@
+[
+  { "source": "Freelance Dev", "amount": 8500, "currency": "USD", "period": "February 2026", "trend": "up", "changePercent": 12 },
+  { "source": "SaaS MRR", "amount": 2400, "currency": "USD", "period": "February 2026", "trend": "up", "changePercent": 8 },
+  { "source": "Consulting", "amount": 3000, "currency": "USD", "period": "February 2026", "trend": "flat", "changePercent": 0 },
+  { "source": "Digital Products", "amount": 650, "currency": "USD", "period": "February 2026", "trend": "down", "changePercent": -5 }
+]
