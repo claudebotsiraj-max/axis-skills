@@ -3,140 +3,160 @@
 # dependencies = ["yfinance>=0.2.36", "rich>=13.7"]
 # ///
 """
-Earnings Calendar — checks earnings dates for all held stocks and flags
-conflicts with short option positions.
+Earnings Calendar — checks earnings dates for all held stocks,
+flags conflicts with short options positions.
 """
 
 import yfinance as yf
 from rich.console import Console
+from rich.table import Table
 from datetime import datetime, timedelta
+import json
+import sys
 
 console = Console()
 
-# All tickers to check (holdings + watchlist + short option underlyings)
-TICKERS = ["TSLA", "PLTR", "NVDA", "TSM", "RKLB", "AVGO", "AAPL", "GOOG",
-           "AMZN", "AMD", "SOFI", "HOOD", "HIMS", "TSLL"]
+# All tickers we hold or have options on
+ALL_TICKERS = ["TSLA", "TSLL", "PLTR", "NVDA", "TSM", "RKLB", "AVGO", "AAPL", "GOOG",
+               "OSCR", "AMZN", "AMD", "SOFI", "HOOD"]
 
-# Short calls that could conflict with earnings
-SHORT_CALLS = [
-    ("PLTR", 60,  "2026-12-18"),
-    ("AVGO", 230, "2026-12-18"),
-    ("TSLA", 465, "2026-02-27"),
-    ("TSLA", 475, "2026-02-27"),
-    ("TSLA", 580, "2026-07-17"),
-    ("TSLA", 700, "2026-09-18"),
-    ("TSLA", 700, "2027-01-15"),
-    ("TSLA", 750, "2027-01-15"),
-    ("RKLB", 105, "2026-07-17"),
-    ("RKLB", 115, "2026-07-17"),
-    ("PLTR", 100, "2027-06-18"),
-    ("HIMS", 65,  "2027-01-15"),
+# Active short options (update from portfolio-watchlist.md)
+SHORT_OPTIONS = [
+    {"ticker": "TSLA", "type": "call", "strike": 465, "expiry": "2026-02-27"},
+    {"ticker": "TSLA", "type": "call", "strike": 475, "expiry": "2026-02-27"},
+    {"ticker": "TSLA", "type": "call", "strike": 400, "expiry": "2026-03-20"},
+    {"ticker": "GOOG", "type": "call", "strike": 315, "expiry": "2026-02-27"},
+    {"ticker": "PLTR", "type": "call", "strike": 60, "expiry": "2026-12-18"},
+    {"ticker": "AVGO", "type": "call", "strike": 230, "expiry": "2026-12-18"},
+    {"ticker": "OSCR", "type": "call", "strike": 25, "expiry": "2026-03-20"},
 ]
 
-def get_earnings_dates():
-    """Fetch next earnings date for each ticker."""
-    earnings = {}
-    today = datetime.now().date()
 
-    for ticker in TICKERS:
-        try:
-            t = yf.Ticker(ticker)
-            # Try calendar first
-            cal = t.calendar
-            if cal is not None:
-                if isinstance(cal, dict):
-                    date = cal.get("Earnings Date")
-                    if isinstance(date, list) and date:
-                        date = date[0]
-                    if hasattr(date, "date"):
-                        date = date.date()
-                    elif isinstance(date, str):
-                        date = datetime.strptime(date, "%Y-%m-%d").date()
-                    earnings[ticker] = date
-                    continue
+def get_earnings_info(ticker_str):
+    """Get next earnings date and estimate info."""
+    try:
+        t = yf.Ticker(ticker_str)
+        cal = t.calendar
+        
+        earnings_date = None
+        if cal is not None:
+            if hasattr(cal, 'iloc') and len(cal) > 0:
+                earnings_date = cal.iloc[0, 0]
+            elif isinstance(cal, dict):
+                dates = cal.get('Earnings Date', [])
+                earnings_date = dates[0] if dates else None
+        
+        return {
+            'ticker': ticker_str,
+            'earnings_date': str(earnings_date) if earnings_date else "Unknown",
+            'earnings_dt': earnings_date,
+        }
+    except Exception as e:
+        return {
+            'ticker': ticker_str,
+            'earnings_date': f"Error: {e}",
+            'earnings_dt': None,
+        }
 
-            # Fallback: try earnings_dates
-            ed = t.earnings_dates
-            if ed is not None and not ed.empty:
-                future = [d.date() for d in ed.index if d.date() >= today]
-                if future:
-                    earnings[ticker] = min(future)
-                    continue
 
-            earnings[ticker] = None
-        except Exception as e:
-            console.print(f"[dim]Could not get earnings for {ticker}: {e}[/dim]")
-            earnings[ticker] = None
-
-    return earnings
-
-def check_conflicts(earnings):
-    """Check if any short call has earnings within its DTE."""
-    today = datetime.now().date()
+def check_conflicts(earnings_data):
+    """Check if any short options span an earnings date."""
+    console.print("\n[bold red]⚠️ EARNINGS vs SHORT OPTIONS CONFLICTS[/bold red]\n")
+    
     conflicts = []
-
-    for ticker, strike, expiry_str in SHORT_CALLS:
-        expiry = datetime.strptime(expiry_str, "%Y-%m-%d").date()
-        earn_date = earnings.get(ticker)
-
-        if earn_date and today <= earn_date <= expiry:
-            days_to_earnings = (earn_date - today).days
-            conflicts.append({
-                "ticker": ticker,
-                "strike": strike,
-                "expiry": expiry_str,
-                "earnings": str(earn_date),
-                "days_to_earnings": days_to_earnings,
-            })
-
+    now = datetime.now()
+    
+    for opt in SHORT_OPTIONS:
+        ticker = opt['ticker']
+        expiry = datetime.strptime(opt['expiry'], "%Y-%m-%d")
+        
+        # Find earnings for this ticker
+        earn = next((e for e in earnings_data if e['ticker'] == ticker), None)
+        if earn and earn['earnings_dt']:
+            try:
+                earn_dt = earn['earnings_dt']
+                if isinstance(earn_dt, str):
+                    earn_dt = datetime.strptime(earn_dt, "%Y-%m-%d")
+                
+                if now < earn_dt < expiry:
+                    conflicts.append({
+                        'ticker': ticker,
+                        'option': f"${opt['strike']} {opt['type']}",
+                        'expiry': opt['expiry'],
+                        'earnings': str(earn_dt.date()) if hasattr(earn_dt, 'date') else str(earn_dt),
+                        'action': "CLOSE BEFORE EARNINGS or ROLL PAST",
+                    })
+            except Exception:
+                pass
+    
+    if conflicts:
+        table = Table(show_header=True, header_style="bold red")
+        table.add_column("Ticker")
+        table.add_column("Short Option")
+        table.add_column("Expiry")
+        table.add_column("Earnings")
+        table.add_column("Action")
+        
+        for c in conflicts:
+            table.add_row(c['ticker'], c['option'], c['expiry'], c['earnings'], c['action'])
+        
+        console.print(table)
+    else:
+        console.print("[green]No earnings conflicts with current short options. ✅[/green]")
+    
     return conflicts
 
-def main():
-    console.print("[bold blue]Checking earnings calendar...[/bold blue]")
-    today = datetime.now().date()
-    earnings = get_earnings_dates()
-
-    print(f"\n📅 **Earnings Calendar** — {today}\n")
-
-    # Sort by date
-    dated = [(t, d) for t, d in earnings.items() if d is not None]
-    dated.sort(key=lambda x: x[1])
-    undated = [t for t, d in earnings.items() if d is None]
-
-    # Next 60 days
-    print("**Upcoming (next 60 days):**")
-    for ticker, date in dated:
-        days = (date - today).days
-        if 0 <= days <= 60:
-            urgency = "🔴" if days <= 7 else "🟡" if days <= 21 else "🟢"
-            print(f"{urgency} **{ticker}** — {date} ({days} days)")
-
-    print("\n**Later:**")
-    for ticker, date in dated:
-        days = (date - today).days
-        if days > 60:
-            print(f"⬜ **{ticker}** — {date} ({days} days)")
-
-    if undated:
-        print(f"\n**No date found:** {', '.join(undated)}")
-
-    # Conflict check
-    conflicts = check_conflicts(earnings)
-    if conflicts:
-        print(f"\n⚠️ **EARNINGS CONFLICTS WITH SHORT CALLS:**")
-        for c in conflicts:
-            print(f"🔴 **{c['ticker']}** ${c['strike']} call (exp {c['expiry']}) — "
-                  f"EARNINGS {c['earnings']} ({c['days_to_earnings']} days!)")
-            print(f"   → Consider closing/rolling BEFORE earnings")
-    else:
-        print(f"\n✅ No immediate earnings conflicts with short calls in next expiry cycle")
-
-    # New CC warnings
-    print(f"\n**⚠️ Do NOT sell new covered calls on:**")
-    for ticker, date in dated:
-        days = (date - today).days
-        if 0 < days <= 45:
-            print(f"- **{ticker}** — earnings {date} ({days} days) — wait until after")
 
 if __name__ == "__main__":
-    main()
+    console.print("[bold]📅 Earnings Calendar & Conflict Check[/bold]")
+    console.print(f"[dim]Run time: {datetime.now().strftime('%Y-%m-%d %H:%M ET')}[/dim]\n")
+    
+    # Fetch earnings for all tickers
+    table = Table(show_header=True, header_style="bold cyan")
+    table.add_column("Ticker")
+    table.add_column("Next Earnings")
+    table.add_column("Days Away")
+    table.add_column("Status")
+    
+    earnings_data = []
+    now = datetime.now()
+    
+    for ticker in ALL_TICKERS:
+        info = get_earnings_info(ticker)
+        earnings_data.append(info)
+        
+        days_away = ""
+        status = ""
+        if info['earnings_dt']:
+            try:
+                earn_dt = info['earnings_dt']
+                if isinstance(earn_dt, str):
+                    earn_dt = datetime.strptime(earn_dt, "%Y-%m-%d")
+                delta = (earn_dt - now).days
+                days_away = f"{delta}d"
+                if delta <= 7:
+                    status = "🔴 THIS WEEK"
+                elif delta <= 14:
+                    status = "🟡 Next 2 weeks"
+                elif delta <= 30:
+                    status = "🟢 This month"
+                else:
+                    status = "⚪ 30+ days"
+            except Exception:
+                status = "❓"
+        else:
+            status = "❓ Unknown"
+        
+        table.add_row(ticker, info['earnings_date'], days_away, status)
+    
+    console.print(table)
+    
+    # Check conflicts
+    conflicts = check_conflicts(earnings_data)
+    
+    if "--json" in sys.argv:
+        output = {
+            'earnings': [{k: v for k, v in e.items() if k != 'earnings_dt'} for e in earnings_data],
+            'conflicts': conflicts,
+        }
+        print(json.dumps(output, indent=2, default=str))
