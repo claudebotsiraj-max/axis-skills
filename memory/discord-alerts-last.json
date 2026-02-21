@@ -3,24 +3,26 @@
     "719580825267601538": {
       "lastMessageTimestamp": "2026-02-12T09:58:00",
       "lastMessageContent": "Took profits @everyone",
-      "lastChecked": "2026-02-16T17:44:00",
+      "lastChecked": "2026-02-20T16:59:00",
       "serverName": "The Insiders Trading Education",
       "channelName": "desi-swings"
     },
     "1444693109454930032": {
-      "lastMessageTimestamp": "2026-02-13T09:02:00",
-      "lastMessageContent": "Vincent Desiano New Post 02/13 Live Trading Link",
-      "lastChecked": "2026-02-16T17:44:00",
+      "lastMessageTimestamp": "2026-02-20T08:56:00",
+      "lastMessageContent": "Vincent Desiano New Post 02/20 Live Trading Zoom Link",
+      "lastChecked": "2026-02-20T15:59:00",
       "serverName": "The Insiders Trading Education",
       "channelName": "daily-zoom-link"
     },
     "1009056980515692565": {
       "lastMessageTimestamp": "2026-02-05T15:21:00",
       "lastMessageContent": "2/5/2026 TRADE #2 BOUGHT $SGOV 477 SHARES AT $100.41",
-      "lastChecked": "2026-02-16T17:44:00",
+      "lastChecked": "2026-02-20T15:59:00",
       "serverName": "Ovtlyr",
-      "channelName": "usic-ovtlyr-trading-room"
+      "channelName": "usic-trading-room"
     }
   },
-  "targetChannel": "1473075200454164520"
+  "targetChannel": "1473075200454164520",
+  "lastCheckAttempt": "2026-02-20T22:59:00",
+  "lastCheckStatus": "skipped - Friday night, markets closed"
 }

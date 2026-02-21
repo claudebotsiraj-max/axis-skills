@@ -16,6 +16,9 @@
 | `ade00fd5` | Twilio Billing Reminder | 15th of month, 10 AM | main session |
 | `10c208d8` | Weekly Workspace Backup | Fri 11 PM ET | #backup-bot |
 
+| `77c76a6d` | External Discord Alerts Scanner | Every 15 min | #discord-alerts |
+| `2f76e10e` | AI Self-Improvement Digest | 7 AM ET daily | #general |
+
 ## Disabled
 | ID | Name | Reason |
 |----|------|--------|

@@ -1,1 +1,65 @@
-{"items": [], "lastRun": null}
+{
+  "items": [
+    {
+      "date": "2026-02-16",
+      "title": "Showboat & Rodney: Agents Demo Their Own Work",
+      "url": "https://simonwillison.net/2026/Feb/10/showboat-and-rodney/",
+      "topic": "agent self-verification, proof artifacts, QA automation"
+    },
+    {
+      "date": "2026-02-16",
+      "title": "GitHub Agentic Workflows (Technical Preview)",
+      "url": "https://github.blog/ai-and-ml/automate-repository-tasks-with-github-agentic-workflows/",
+      "topic": "continuous AI, agentic CI/CD, scoped autonomy"
+    },
+    {
+      "date": "2026-02-16",
+      "title": "AgentAuditor: Reasoning Trees Beat Majority Vote",
+      "url": "https://arxiv.org/abs/2602.09341",
+      "topic": "multi-agent reasoning, conflict resolution, reasoning trees"
+    },
+    {
+      "date": "2026-02-16",
+      "title": "Anthropic 2026 Agentic Coding Trends Report",
+      "url": "https://tessl.io/blog/8-trends-shaping-software-engineering-in-2026-according-to-anthropics-agentic-coding-report/",
+      "topic": "agentic coding trends, orchestration, SDLC automation"
+    },
+    {
+      "date": "2026-02-16",
+      "title": "Latent Space: Jeff Dean on Distillation & Pareto Frontier",
+      "url": "https://www.latent.space/p/jeffdean",
+      "topic": "model distillation, efficiency, model routing"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Quantifying Infrastructure Noise in Agentic Coding Evals",
+      "url": "https://www.anthropic.com/engineering/infrastructure-noise",
+      "topic": "eval reliability, infrastructure variance, benchmarking methodology"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Implementing a Secure Sandbox for Local Agents",
+      "url": "https://cursor.com/blog/agent-sandboxing",
+      "topic": "agent sandboxing, approval fatigue, security-autonomy tradeoff"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Towards Self-Driving Codebases",
+      "url": "https://cursor.com/blog/self-driving-codebases",
+      "topic": "multi-agent harness, dependency graphs, autonomous coding"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Prompt Caching as Core Harness Architecture",
+      "url": "https://simonwillison.net/2026/Feb/20/thariq-shihipar/",
+      "topic": "prompt caching, harness design, cost optimization"
+    },
+    {
+      "date": "2026-02-20",
+      "title": "Stripe Minions Part 2: One-Shot Coding Agents",
+      "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2",
+      "topic": "production coding agents, task decomposition, one-shot execution"
+    }
+  ],
+  "lastRun": "2026-02-20T07:00:00-05:00"
+}

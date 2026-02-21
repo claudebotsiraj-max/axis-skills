@@ -22,3 +22,4 @@ mission-control/.next/
 # Temp
 *.tmp
 *.log
+.tmp_discord_config.json

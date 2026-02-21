@@ -25,6 +25,7 @@
 - @elonmusk (Elon Musk — Tesla/SpaceX/X CEO)
 - @SawyerMerritt (Sawyer Merritt — Tesla/EV/energy news)
 - @usmanashraff (Usman Ashraf)
+- @salahsiraj (Salah Siraj — Salah's own account)
 
 ## X Lists to Monitor
 - **@StockAlerts** — List ID: `1478008405440794627` — URL: https://x.com/i/lists/1478008405440794627

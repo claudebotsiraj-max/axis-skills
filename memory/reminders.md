@@ -21,5 +21,8 @@ Items persist until Salah explicitly dismisses them. Check during morning briefi
 - [ ] **Wordfence/librhythm.com** — security problems detected
 - [ ] **Brave Search API** — updated Terms of Service
 
+## 📅 Upcoming
+- [ ] **ElevenLabs subscription renews Feb 27** — Starter plan, $3.50/mo (30% discount). Decide to keep or cancel by **Feb 20**. <https://elevenlabs.io/app/subscription>
+
 ## 🔄 Recurring
 - [ ] **Twilio billing** — check on 15th of each month (cron set)

@@ -3,15 +3,15 @@
 ## Core Holdings
 | Ticker | Shares | Cost | Current | % of Portfolio |
 |--------|--------|------|---------|---------------|
-| TSLA | 6,760 | $245 | $417 | 69.9% |
+| TSLA | 6,760 | $245 | $409 | 68.5% |
 | TSLL | 6,000 | $15.06 | $15.93 | 2.4% |
-| PLTR | 900 | $84 | $131 | 2.9% |
-| NVDA | 525 | $166 | $182.78 | 2.4% |
-| TSM | 203 | $221 | $366 | 1.8% |
-| RKLB | 1,000 | $50 | $67 | 1.7% |
-| AVGO | 201 | $250 | $325 | 1.6% |
-| AAPL | 203 | $216 | $256 | 1.3% |
-| GOOG | 151 | $175 | $306 | 1.1% |
+| PLTR | 900 | $84 | $134 | 3.0% |
+| NVDA | 525 | $166 | $186 | 2.4% |
+| TSM | 203 | $221 | $358 | 1.8% |
+| RKLB | 1,000 | $50 | $75 | 1.9% |
+| AVGO | 201 | $250 | $335 | 1.7% |
+| AAPL | 203 | $216 | $262 | 1.3% |
+| GOOG | 151 | $175 | $305 | 1.1% |
 
 ## Active Short Options (monitor for rolling/closing)
 - 5x PLTR Dec '26 $60 Call — DEEPLY ITM, needs action
@@ -41,9 +41,9 @@
 - 5x OSCR Mar 20 '26 $25 Call — nearly worthless, write off
 
 ## Key Dates
-- Feb 17: MARKETS CLOSED (Presidents' Day)
-- Feb 18: Execute weekly trade plan (CCs + CSPs)
-- Feb 20: NVDA $160 long calls expire (4x) — SELL or EXERCISE Tue
+- ~~Feb 17: MARKETS CLOSED (Presidents' Day)~~
+- ~~Feb 18: Execute weekly trade plan (CCs + CSPs)~~
+- Feb 20: NVDA $160 long calls expire (4x) — ⚠️ SELL TODAY Feb 19 (worth ~$10.4K)
 - Feb 25: NVDA earnings — no CCs until after
 - Feb 26: RKLB earnings — sell CCs BEFORE for IV crush
 - Feb 27: TSLA $465/$475 short calls expire, GOOG $315 long calls expire
@@ -59,5 +59,13 @@
 - Close at 50% profit
 - Keep 3,000 TSLA shares minimum as core position
 
+## Weekly Review Notes (Feb 16)
+- TSLA concentration at 80.5% — aggressive CC overwrite plan to trim
+- Trade plan for Feb 18: 50x TSLA CCs + 9x PLTR + 10x RKLB + 5 smaller CCs + 4 CSPs
+- NVDA $160 long calls: MUST sell Tuesday Feb 18 (expire Thu Feb 20)
+- RKLB CCs: sell before Feb 26 earnings for IV premium
+- AVGO $230 CC: buy back before Mar 4 earnings
+- Estimated premium if executed: $53-67K gross
+
 ## Next Review: 2026-02-22
-## Last Updated: 2026-02-16 (daily options check — NVDA $160 calls flagged for Tuesday sale, all short calls safe)
+## Last Updated: 2026-02-20 (daily cron check — NVDA $160 calls expiry alert (critical) + RKLB >5% drop alert)
