@@ -23,6 +23,6 @@
     }
   },
   "targetChannel": "1473075200454164520",
-  "lastCheckAttempt": "2026-02-20T22:59:00",
-  "lastCheckStatus": "skipped - Friday night, markets closed"
+  "lastCheckAttempt": "2026-02-21T22:59:00",
+  "lastCheckStatus": "browser_unavailable - chrome tab not attached (attempt 39, weekend)"
 }

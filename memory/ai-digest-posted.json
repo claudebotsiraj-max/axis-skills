@@ -59,7 +59,25 @@
       "title": "Stripe Minions Part 2: One-Shot Coding Agents",
       "url": "https://stripe.dev/blog/minions-stripes-one-shot-end-to-end-coding-agents-part-2",
       "topic": "production coding agents, task decomposition, one-shot execution"
+    },
+    {
+      "date": "2026-02-21",
+      "title": "Building a C Compiler with a Team of Parallel Claudes",
+      "url": "https://www.anthropic.com/engineering/building-c-compiler",
+      "topic": "multi-agent harness, parallel agents, task locking, context pollution, test design for agents"
+    },
+    {
+      "date": "2026-02-21",
+      "title": "Cord: Coordinating Trees of AI Agents",
+      "url": "https://www.june.kim/cord",
+      "topic": "multi-agent coordination, spawn vs fork, dynamic task decomposition, dependency trees"
+    },
+    {
+      "date": "2026-02-21",
+      "title": "Andrej Karpathy Coins Claws as a Category",
+      "url": "https://simonwillison.net/2026/Feb/21/claws/",
+      "topic": "claw ecosystem, OpenClaw category, persistent agent systems, personal hardware agents"
     }
   ],
-  "lastRun": "2026-02-20T07:00:00-05:00"
+  "lastRun": "2026-02-21T07:01:00-05:00"
 }
