@@ -37,6 +37,15 @@
 - Bloom (minimal social)
 - Rettig's (general gym)
 
+## SEO
+- WordPress: librhythm.com/wp-admin (user: cloudebotsiraj, SEO Manager role)
+- Yoast SEO plugin installed
+- Google Business Profile: libertyacademyrg@gmail.com (4.9★)
+- Google Search Console: set up (Feb 2026)
+- Wordfence security plugin active
+- Current state: 11 pages, 0 blog posts, sitemap has HTTP/HTTPS mismatch
+- Priority: blog content, local SEO schema, meta tag optimization
+
 ## Strategy
 - Break RG industry pattern (90% competition photos → educational, emotional, myth-busting)
 - Target: parents of kids 3-12

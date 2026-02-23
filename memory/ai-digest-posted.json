@@ -77,7 +77,25 @@
       "title": "Andrej Karpathy Coins Claws as a Category",
       "url": "https://simonwillison.net/2026/Feb/21/claws/",
       "topic": "claw ecosystem, OpenClaw category, persistent agent systems, personal hardware agents"
+    },
+    {
+      "date": "2026-02-22",
+      "title": "Don't Waste Your Back Pressure",
+      "url": "https://ghuntley.com/pressure/",
+      "topic": "back pressure, automated feedback loops, agent alignment, long-horizon tasks"
+    },
+    {
+      "date": "2026-02-22",
+      "title": "Everything Is a Ralph Loop",
+      "url": "https://ghuntley.com/loop/",
+      "topic": "monolithic agent pattern, single-process orchestration, context engineering, loop-based development"
+    },
+    {
+      "date": "2026-02-22",
+      "title": "Anti-Patterns and Patterns for Secure Code Generation via AI",
+      "url": "https://ghuntley.com/secure-codegen/",
+      "topic": "secure codegen, agent security, loop-based verification, MCP anti-patterns"
     }
   ],
-  "lastRun": "2026-02-21T07:01:00-05:00"
+  "lastRun": "2026-02-22T04:59:00-05:00"
 }

@@ -4,7 +4,6 @@
 | ID | Name | Schedule | Target |
 |----|------|----------|--------|
 | `326c455b` | Daily Morning Briefing | 8 AM ET daily | Split across channels |
-| `c6a918d8` | X Watchlist Alert | Every 15 min | #x-post |
 | `578e6806` | Unusual Whales Options Flow | Every 15 min | #stock-alert |
 | `1605299e` | Stock Pivot Alert | */15 8-17 Mon-Fri ET | #stock-alert |
 | `0f20c690` | Daily Portfolio Options Check | 1 PM ET Mon-Fri | #stock-alert |
@@ -15,12 +14,12 @@
 | `e7d0c9f6` | Daily Git Auto-Commit & Push | 11 PM ET daily | #general |
 | `ade00fd5` | Twilio Billing Reminder | 15th of month, 10 AM | main session |
 | `10c208d8` | Weekly Workspace Backup | Fri 11 PM ET | #backup-bot |
-
 | `77c76a6d` | External Discord Alerts Scanner | Every 15 min | #discord-alerts |
 | `2f76e10e` | AI Self-Improvement Digest | 7 AM ET daily | #general |
 
 ## Disabled
 | ID | Name | Reason |
 |----|------|--------|
+| `c6a918d8` | X Watchlist Alert | Stopped until further notice |
 | `28c7893a` | Mission Control Build Check | One-time, completed |
 | `1446c449` | DTF Reservation Check | Date passed (Feb 15) |
