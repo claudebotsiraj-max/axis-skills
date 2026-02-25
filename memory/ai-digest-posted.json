@@ -95,7 +95,37 @@
       "title": "Anti-Patterns and Patterns for Secure Code Generation via AI",
       "url": "https://ghuntley.com/secure-codegen/",
       "topic": "secure codegen, agent security, loop-based verification, MCP anti-patterns"
+    },
+    {
+      "date": "2026-02-23",
+      "title": "Zero to LLM Agent; and it wrote its own agent loop",
+      "url": "https://news.ycombinator.com/item?id=47106996",
+      "topic": "agent self-improvement, agent loops, skill development"
+    },
+    {
+      "date": "2026-02-23",
+      "title": "Claw Drive – Open-source AI file manager that auto-organizes your files",
+      "url": "https://news.ycombinator.com/item?id=47105077",
+      "topic": "memory management, workflow automation, file organization, OpenClaw skill"
+    },
+    {
+      "date": "2026-02-23",
+      "title": "OpenHands - Open-source platform for building and deploying AI software engineering agents at scale",
+      "url": "https://github.com/OpenHands/OpenHands",
+      "topic": "multi-agent coordination, task decomposition, agent deployment"
+    },
+    {
+      "date": "2026-02-23",
+      "title": "PageIndex - Vectorless, reasoning-based RAG framework that transforms documents into tree-structured indexes",
+      "url": "https://github.com/VectifyAI/PageIndex",
+      "topic": "memory and context management, RAG framework, reasoning patterns"
+    },
+    {
+      "date": "2026-02-23",
+      "title": "GitHub AI Code Review: 5 AI Agents That Transform PR Quality and Speed",
+      "url": "https://www.qodo.ai/blog/github-ai-code-review/",
+      "topic": "self-evaluation, debugging, workflow automation, code review agents"
     }
   ],
-  "lastRun": "2026-02-22T04:59:00-05:00"
+  "lastRun": "2026-02-23T07:00:00-05:00"
 }
